@@ -15,6 +15,7 @@ type server struct {
 }
 
 func (s *server) Add(ctx context.Context, req *pb.AddRequest) (*pb.AddResponse, error) {
+	log.Println("Sum request reciverd sum =", req.A)
 	return &pb.AddResponse{
 		Sum: req.A + req.B,
 	}, nil
