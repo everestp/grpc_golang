@@ -8,7 +8,7 @@ test:
 	@go test -v ./...
 
 proto:
-	protoc -I=proto  --go_out=. --go-grpc_out=. proto/main.proto proto/greeter.proto
+	protoc -go_out=. --go-grpc_out=. proto/main.proto
 
 
 .PHONY: proto
